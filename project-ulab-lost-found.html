@@ -1,0 +1,119 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Caveat:wght@500&family=Fira+Code&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+<title>ULAB Lost &amp; Found API | Sukanta Majumder</title>
+</head>
+<body>
+<header>
+  <nav class="wrap">
+    <a href="index.html" class="logo"><i>&lt;/&gt;</i>Sukanta <b>Majumder</b></a>
+    <button class="menu" aria-label="Toggle menu">☰</button>
+    <ul>
+      <li><a href="index.html#home">Home</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#skills">Skills</a></li>
+      <li><a href="index.html#projects" class="active">Projects</a></li>
+      <li><a href="index.html#resume">Resume</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <section class="pd-hero">
+    <div class="wrap">
+      <a class="back" href="index.html#projects">← Back to Portfolio</a>
+      <h1>ULAB Lost &amp; Found <span>API</span></h1>
+      <p class="lead">A role-based REST API for managing lost and found items within the ULAB community, with JWT authentication, role-based authorization and a verification-based claim process.</p>
+      <div class="pd-meta">
+        <div class="panel"><small>Type</small>REST API (backend)</div>
+        <div class="panel"><small>Status</small>Completed</div>
+        <div class="panel"><small>Stack</small>Node.js, Express, MongoDB</div>
+        <div class="panel"><small>Auth</small>JWT, HTTP-only Cookie, RBAC</div>
+      </div>
+      <div class="btns" style="margin-top:28px">
+        <a class="btn primary" href="https://github.com/Sukanta116/Ulab_Lost_And_Found" target="_blank" rel="noopener">View on GitHub</a>
+        <a class="btn ghost" href="https://documenter.getpostman.com/view/58097853/2sBYHNXPLF" target="_blank" rel="noopener">API documentation</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="pd-body">
+    <div class="wrap">
+
+  <section>
+    <h2>Overview</h2>
+    <p>ULAB Lost &amp; Found is a backend REST API designed to provide a structured way for the ULAB community to report lost items, record found items and manage ownership claims. Students can register and report lost items, while staff can record found items and review claims. The system uses role-based authorization and verification questions to make the claim process more reliable and reduce false ownership claims.</p>
+  </section>
+
+  <section>
+    <h2>Key features</h2>
+    <ul>
+      <li><strong>JWT authentication:</strong> secure registration and login using JWT stored in an HTTP-only cookie.</li>
+      <li><strong>Role-based authorization:</strong> separate permissions for students, staff and administrators.</li>
+      <li><strong>User management:</strong> students can self-register, while administrators can add staff or administrator accounts.</li>
+      <li><strong>Lost &amp; found management:</strong> manage records for lost and found items using dedicated MongoDB models.</li>
+      <li><strong>Claim management:</strong> students can submit claims for found items and staff can review them.</li>
+      <li><strong>Claim verification:</strong> verification questions and answers are used to evaluate whether a claimant can prove ownership.</li>
+      <li><strong>Admin control:</strong> administrators have additional authority over user and lost &amp; found information.</li>
+      <li><strong>Validation &amp; error handling:</strong> request validation and custom error handling are used to keep API responses consistent.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>How a claim works</h2>
+    <ul>
+      <li>A staff member records a found item with verification questions.</li>
+      <li>A student submits a claim for the found item and provides verification answers.</li>
+      <li>The submitted answers are evaluated against the expected answers and a verification score is generated.</li>
+      <li>Staff review the claim and can accept or reject it based on the verification result.</li>
+      <li>Once a claim is accepted, the item can be treated as successfully returned to its rightful owner.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Example endpoints</h2>
+    <p>The API is organized around authentication, users, lost items, found items and claims. Here are some of the available endpoints. For the complete API, please check the <a class="api-doc-link" href="https://documenter.getpostman.com/view/58097853/2sBYHNXPLF" target="_blank" rel="noopener">API documentation</a>.
+</p>
+    <div class="table-scroll panel">
+      <table>
+        <thead><tr><th>Method</th><th>Endpoint</th><th>Purpose</th></tr></thead>
+        <tbody>
+          <tr><td class="m-post">POST</td><td><code>/register</code></td><td>Register a new student account</td></tr>
+          <tr><td class="m-post">POST</td><td><code>/login</code></td><td>Authenticate a user and set the JWT cookie</td></tr>
+          <tr><td class="m-post">POST</td><td><code>/logout</code></td><td>Log out the authenticated user</td></tr>
+          <tr><td class="m-post">POST</td><td><code>/admin/addUser</code></td><td>Allow an administrator to create staff or admin accounts</td></tr>
+          <tr><td class="m-post">POST</td><td><code>/lost</code></td><td>Create a lost-item report</td></tr>
+          <tr><td class="m-post">POST</td><td><code>/found</code></td><td>Create a found-item record</td></tr>
+          <tr><td class="m-post">POST</td><td><code>/claim</code></td><td>Submit a claim for a found item</td></tr>
+          <tr><td class="m-patch">PATCH</td><td><code>/claim/:id</code></td><td>Review and update a claim</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2>What I learned</h2>
+    <p>Building this project helped me understand how to design and structure a real-world Node.js REST API using MVC architecture. I worked with Express middleware, JWT authentication with HTTP-only cookies, role-based authorization, MongoDB and Mongoose relationships, request validation, custom error handling and claim verification logic. I also learned how to organize an API for testing and document its endpoints clearly using Postman.</p>
+  </section>
+
+</div>
+
+
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Sukanta Majumder.</span>
+    <a href="index.html#projects">← Back to Portfolio</a>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+
+</body>
+</html>
