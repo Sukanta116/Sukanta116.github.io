@@ -47,7 +47,7 @@ h1 span,h2 span{color:var(--blue)}
 .hero-img::before{content:"";position:absolute;bottom:0;left:4%;width:75%;aspect-ratio:1;border-radius:50%;background:linear-gradient(160deg,#1a6bff,#082a66);opacity:.25}
 .hero-img img{position:relative;height:100%;width:auto;max-width:100%;display:block;object-fit:contain;object-position:bottom}
 .arrow{position:absolute;top:128px;right:112px;width:70px;z-index:2;transform:rotate(-8deg)}
-.note{position:absolute;top:36px;right:0;font-size:1.7rem;line-height:1.2;transform:rotate(-8deg);z-index:2}
+.note{position:absolute;top:21px;right: 55px;;font-size:1.7rem;line-height:1.2;transform:rotate(-8deg);z-index:2}
 .code{position:absolute;right:0;top:36%;z-index:2;font-family:"Fira Code",monospace;font-size:.78rem;color:#9bb6e0;border-left:1px solid var(--line);padding-left:12px;white-space:pre;line-height:1.5}
 
 /* ===== SHARED SECTIONS ===== */
