@@ -25,3 +25,9 @@ if (sections.length) {
 links.forEach((l) =>
   l.addEventListener("click", () => nav.classList.remove("open")),
 );
+
+function toggleDoorSign() {
+  document.body.classList.toggle("scrolled", window.scrollY > 40);
+}
+window.addEventListener("scroll", toggleDoorSign);
+toggleDoorSign(); // runs once on page load
