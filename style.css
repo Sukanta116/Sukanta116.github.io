@@ -343,3 +343,11 @@ body.scrolled .door-sign {
     height: 65px;
   }
 }
+.shortner {
+    background-color: #f1f5f9;
+    color: #0f172a;
+    padding: 3px 5px;
+    border-radius: 4px;
+    font-family: "Fira Code", monospace;
+    font-size: 0.8em;
+}

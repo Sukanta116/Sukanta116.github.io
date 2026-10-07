@@ -113,6 +113,10 @@
         <p>Tools I use to design, build and ship backend projects.</p>
       </div>
      <div class="grid">
+     <div class="tile panel" tabindex="0">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="" />JavaScript
+    <div class="tip"><strong>JavaScript</strong><ul><li>ES6+</li><li>Async/Await</li><li>Promises</li><li>Fetch API</li></ul></div>
+  </div>
   <div class="tile panel" tabindex="0">
     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="" />Node.js
     <div class="tip"><strong>Node.js</strong><ul><li>REST APIs</li><li>Async Programming</li><li>HTTP/HTTPS</li><li>npm</li></ul></div>
@@ -122,10 +126,6 @@
     <div class="tip"><strong>Express.js</strong><ul><li>REST API</li><li>Middleware</li><li>MVC</li><li>Authentication</li><li>Validation</li></ul></div>
   </div>
   <div class="tile panel" tabindex="0">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-original.svg" alt="" />NestJS
-    <div class="tip"><strong>NestJS</strong><ul><li>Modules</li><li>Controllers</li><li>Services</li><li>Dependency Injection</li></ul></div>
-  </div>
-  <div class="tile panel" tabindex="0">
     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="" />MongoDB
     <div class="tip"><strong>MongoDB</strong><ul><li>CRUD</li><li>Mongoose</li><li>Schema Design</li><li>Indexing</li><li>Atlas</li></ul></div>
   </div>
@@ -133,14 +133,31 @@
     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="" />PostgreSQL
     <div class="tip"><strong>PostgreSQL</strong><ul><li>SQL</li><li>Joins</li><li>ERD</li><li>Normalization</li><li>Database Design</li></ul></div>
   </div>
-  <div class="tile panel" tabindex="0">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="" />JavaScript
-    <div class="tip"><strong>JavaScript</strong><ul><li>ES6+</li><li>Async/Await</li><li>Promises</li><li>Fetch API</li></ul></div>
-  </div>
+ 
   <div class="tile panel" tabindex="0">
     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="" />Java
     <div class="tip"><strong>Java</strong><ul><li>OOP</li><li>DSA</li></ul></div>
   </div>
+  <div class="tile panel" tabindex="0">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" alt="" />Postman
+    <div class="tip"><strong>Postman</strong><ul><li>API Testing</li><li>Collections</li><li>Environment Variables</li><li>Automated Tests</li></ul></div>
+</div>
+
+<div class="tile panel" tabindex="0">
+    <img src="https://cdn-icons-png.flaticon.com/512/1087/1087927.png" alt="" />REST API
+    <div class="tip"><strong>REST API</strong>
+      <ul>
+    <li>RESTful Routing</li>
+    <li>CRUD & HTTP</li>
+    <li>Status Codes</li>
+    <li>Path & Query Params</li>
+    <li>JSON API</li>
+    <li>JWT Auth</li>
+    <li>Role-Based Access</li>
+    <li>Validation & Errors</li>
+</ul>
+  </div>
+</div>
   <div class="tile panel" tabindex="0">
     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="" />
     Git
@@ -180,33 +197,165 @@
   </section>
 
   <!-- PROJECTS -->
-  <section class="sec" id="projects">
+<section class="sec" id="projects">
+
     <div class="wrap">
-      <div class="sec-head">
-        <p class="eyebrow">PROJECTS</p>
-        <h2>What I've <span>Built</span></h2>
-      </div>
-      <div class="projects">
-        <article class="p-card">
-          <span class="p-status">Completed</span>
-          <h3>ULAB Lost &amp; Found API</h3>
-          <p class="p-desc">A role-based REST API for managing lost and found items within the ULAB community. It provides secure JWT authentication, user and role management, lost and found item management, and a claim verification workflow to help staff verify rightful ownership.</p>
-          <ul class="p-tech">
-            <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="" />Node.js</li>
-            <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="" style="filter: invert(1)" />Express.js</li>
-            <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="" />MongoDB</li>
-            <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="" />JavaScript</li>
-            <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" alt="" />Postman</li>
-          </ul>
-          <div class="p-actions">
-            <a class="p-link" href="https://github.com/Sukanta116/Ulab_Lost_And_Found" target="_blank" rel="noopener"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="" style="filter: invert(1)" />GitHub</a>
-            <a class="p-link" href="https://documenter.getpostman.com/view/58097853/2sBYHNXPLF" target="_blank" rel="noopener">🔗 API docs</a>
-            <a class="btn-details" href="project-ulab-lost-found.html">Project details</a>
-          </div>
-        </article>
-      </div>
+
+        <div class="sec-head">
+            <p class="eyebrow">PROJECTS</p>
+            <h2>What I've <span>Built</span></h2>
+        </div>
+
+        <div class="projects">
+
+            <!-- ULAB Lost & Found API -->
+            <article class="p-card">
+
+                <span class="p-status">Completed</span>
+
+                <h3>ULAB Lost &amp; Found API</h3>
+
+                <p class="p-desc">
+                    A role-based REST API for managing lost and found items within the ULAB
+                    community. It provides secure JWT authentication, user and role management,
+                    lost and found item management, and a claim verification workflow to help
+                    staff verify rightful ownership.
+                </p>
+
+                <ul class="p-tech">
+
+                    <li>
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                            alt="" />
+                        Node.js
+                    </li>
+
+                    <li>
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
+                            alt="" style="filter: invert(1)" />
+                        Express.js
+                    </li>
+
+                    <li>
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+                            alt="" />
+                        MongoDB
+                    </li>
+
+                    <li>
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                            alt="" />
+                        JavaScript
+                    </li>
+
+                    <li>
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg"
+                            alt="" />
+                        Postman
+                    </li>
+
+                </ul>
+
+                <div class="p-actions">
+
+                    <a class="p-link"
+                        href="https://github.com/Sukanta116/Ulab_Lost_And_Found"
+                        target="_blank"
+                        rel="noopener">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+                            alt="" style="filter: invert(1)" />
+                        GitHub
+                    </a>
+
+                    <a class="p-link"
+                        href="https://documenter.getpostman.com/view/58097853/2sBYHNXPLF"
+                        target="_blank"
+                        rel="noopener">
+                        🔗 API docs
+                    </a>
+
+                    <a class="btn-details" href="project-ulab-lost-found.html">
+                        Project details
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- URL Shortener API -->
+            <article class="p-card">
+
+                <span class="p-status">Completed</span>
+
+                <h3>URL Shortener API</h3>
+
+                <p class="p-desc">
+                    A user-based URL shortening API built with Node.js, Express.js, and MongoDB.
+                    It provides JWT authentication, protected routes, URL management, unique short
+                    URL generation, and redirection from short URLs to their original destinations.
+                </p>
+
+                <ul class="p-tech">
+
+                    <li>
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                            alt="" />
+                        Node.js
+                    </li>
+
+                    <li>
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
+                            alt="" style="filter: invert(1)" />
+                        Express.js
+                    </li>
+
+                    <li>
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+                            alt="" />
+                        MongoDB
+                    </li>
+
+                    <li>
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                            alt="" />
+                        JavaScript
+                    </li>
+
+                    <li>
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg"
+                            alt="" />
+                        Postman
+                    </li>
+
+                </ul>
+
+                <div class="p-actions">
+
+                    <a class="p-link"
+                        href="https://github.com/Sukanta116/Url_shortner_api"
+                        target="_blank"
+                        rel="noopener">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+                            alt="" style="filter: invert(1)" />
+                        GitHub
+                    </a>
+
+                    <a class="btn-details" href="project_url_shortner_api.html">
+                        Project details
+                    </a>
+
+                </div>
+
+            </article>
+
+        </div>
+
     </div>
-  </section>
+
+</section>
+
+
 
   <!-- RESUME -->
   <section class="sec" id="resume">

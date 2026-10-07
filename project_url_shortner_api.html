@@ -1,0 +1,419 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Caveat:wght@500&family=Fira+Code&display=swap"
+    rel="stylesheet"
+/>
+
+<link rel="stylesheet" href="style.css" />
+
+<title>URL Shortener API | Sukanta Majumder</title>
+
+
+</head>
+
+<body>
+
+<header>
+    <nav class="wrap">
+
+
+    <a href="index.html" class="logo">
+        <i>&lt;/&gt;</i>Sukanta <b>Majumder</b>
+    </a>
+
+    <button class="menu" aria-label="Toggle menu">☰</button>
+
+    <ul>
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#skills">Skills</a></li>
+        <li><a href="index.html#projects" class="active">Projects</a></li>
+        <li><a href="index.html#resume">Resume</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+
+</nav>
+
+
+</header>
+
+<main>
+
+
+<section class="pd-hero">
+
+    <div class="wrap">
+
+        <a class="back" href="index.html#projects">
+            ← Back to Portfolio
+        </a>
+
+        <h1>
+            URL Shortener <span>API</span>
+        </h1>
+
+        <p class="lead">
+            A secure and user-based URL shortening service built with Node.js,
+            Express.js, MongoDB, and JWT authentication, allowing users to create
+            and manage their own shortened URLs.
+        </p>
+
+
+        <div class="pd-meta">
+
+            <div class="panel">
+                <small>Type</small>
+                REST API (backend)
+            </div>
+
+            <div class="panel">
+                <small>Status</small>
+                Completed
+            </div>
+
+            <div class="panel">
+                <small>Stack</small>
+                Node.js, Express.js, MongoDB
+            </div>
+
+            <div class="panel">
+                <small>Auth</small>
+                JWT, HTTP-only Cookie
+            </div>
+
+        </div>
+
+
+        <div class="btns" style="margin-top:28px">
+
+            <a
+                class="btn primary"
+                href="https://github.com/Sukanta116/Url_shortner_api"
+                target="_blank"
+                rel="noopener"
+            >
+                View on GitHub
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="pd-body">
+
+    <div class="wrap">
+
+
+        <section>
+
+            <h2>Overview</h2>
+
+            <p>
+                URL Shortener API is a secure and user-based URL shortening service
+                that converts long URLs into short, easy-to-share links. Authenticated
+                users can create and manage their own shortened URLs.
+            </p>
+
+            <p>
+                The project was built to understand how a realistic backend service
+                works beyond basic CRUD operations, with a focus on REST API development,
+                authentication, protected routes, validation, unique URL generation,
+                HTTP redirection and frontend-backend communication.
+            </p>
+
+        </section>
+
+
+        <section>
+
+            <h2>Key features</h2>
+
+            <ul>
+
+                <li>
+                    <strong>User registration:</strong>
+                    users can create an account.
+                </li>
+
+                <li>
+                    <strong>User login:</strong>
+                    users can authenticate using their credentials.
+                </li>
+
+                <li>
+                    <strong>Password hashing:</strong>
+                    passwords are securely hashed using bcrypt.
+                </li>
+
+                <li>
+                    <strong>JWT authentication:</strong>
+                    JWT is used to authenticate users.
+                </li>
+
+                <li>
+                    <strong>HTTP-only cookies:</strong>
+                    authentication tokens are stored in HTTP-only cookies.
+                </li>
+
+                <li>
+                    <strong>Protected routes:</strong>
+                    private API endpoints require authentication.
+                </li>
+
+                <li>
+                    <strong>URL shortening:</strong>
+                    authenticated users can convert long URLs into short links.
+                </li>
+
+                <li>
+                    <strong>Unique short identifiers:</strong>
+                    the system generates unique identifiers for shortened URLs.
+                </li>
+
+                <li>
+                    <strong>URL history:</strong>
+                    users can view their previously created URLs.
+                </li>
+
+                <li>
+                    <strong>URL count:</strong>
+                    the dashboard displays the number of URLs created by the user.
+                </li>
+
+                <li>
+                    <strong>Short URL redirection:</strong>
+                    short URLs redirect users to their original URLs.
+                </li>
+
+                <li>
+                    <strong>Request validation:</strong>
+                    incoming requests are validated on the backend.
+                </li>
+
+                <li>
+                    <strong>User-specific URLs:</strong>
+                    each user can access their own URL history.
+                </li>
+
+                <li>
+                    <strong>Copy shortened URLs:</strong>
+                    users can copy their generated short URLs from the dashboard.
+                </li>
+
+            </ul>
+
+        </section>
+
+
+        <section>
+
+            <h2>How URL shortening works</h2>
+
+            <ul>
+
+                <li>
+                    An authenticated user submits a long URL.
+                </li>
+
+                <li>
+                    The request is sent to <code  class="shortner">POST /shortner</code>.
+                </li>
+
+                <li>
+                    The server generates a unique short identifier.
+                </li>
+
+                <li>
+                    The URL information is saved in MongoDB.
+                </li>
+
+                <li>
+                    The generated short URL is returned to the user.
+                </li>
+
+                <li>
+                    When the short URL is visited, the server finds the
+                    corresponding original URL.
+                </li>
+
+                <li>
+                    The server redirects the request to the original URL.
+                </li>
+
+            </ul>
+
+        </section>
+
+
+        <section>
+
+            <h2>Authentication flow</h2>
+
+            <ul>
+
+                <li>
+                    A user logs in with their credentials.
+                </li>
+
+                <li>
+                    The server validates the credentials.
+                </li>
+
+                <li>
+                    A JWT is generated after successful authentication.
+                </li>
+
+                <li>
+                    The JWT is stored in an HTTP-only cookie.
+                </li>
+
+                <li>
+                    Protected requests pass through authentication middleware.
+                </li>
+
+                <li>
+                    Authenticated user identity is used when accessing user-specific URLs.
+                </li>
+
+            </ul>
+
+        </section>
+
+
+        <section>
+
+            <h2>Example endpoints</h2>
+
+            <p>
+                The API is organized around authentication and URL management.
+                The following are the endpoints documented in the project.
+            </p>
+
+
+            <div class="table-scroll panel">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>Method</th>
+                            <th>Endpoint</th>
+                            <th>Purpose</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td class="m-post">POST</td>
+                            <td><code>/register</code></td>
+                            <td>Register a new user</td>
+                        </tr>
+
+                        <tr>
+                            <td class="m-post">POST</td>
+                            <td><code>/login</code></td>
+                            <td>Login user</td>
+                        </tr>
+
+                        <tr>
+                            <td class="m-post">POST</td>
+                            <td><code>/logout</code></td>
+                            <td>Logout the authenticated user</td>
+                        </tr>
+
+                        <tr>
+                            <td class="m-get">GET</td>
+                            <td><code>/me</code></td>
+                            <td>Get the current authenticated user</td>
+                        </tr>
+
+                        <tr>
+                            <td class="m-post">POST</td>
+                            <td><code>/shortner</code></td>
+                            <td>Create a short URL</td>
+                        </tr>
+
+                        <tr>
+                            <td class="m-get">GET</td>
+                            <td><code>/showAll</code></td>
+                            <td>Get the user's URLs</td>
+                        </tr>
+
+                        <tr>
+                            <td class="m-get">GET</td>
+                            <td><code>/:shortLink</code></td>
+                            <td>Redirect to the original URL</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+       <section>
+    <h2>What I learned</h2>
+
+    <ul>
+        <li>Building REST APIs with Node.js and Express.js</li>
+        <li>JWT authentication with HTTP-only cookies</li>
+        <li>Password hashing with bcrypt</li>
+        <li>Authentication middleware and protected routes</li>
+        <li>MongoDB and Mongoose for data management</li>
+        <li>Request validation and error handling</li>
+        <li>Generating unique short URLs</li>
+        <li>Associating URLs with authenticated users</li>
+        <li>Implementing short URL redirection</li>
+        <li>Connecting a frontend with a backend API</li>
+    </ul>
+</section>
+
+
+    </div>
+
+</section>
+
+
+</main>
+
+<footer>
+
+
+<div class="wrap">
+
+    <span>
+        © 2026 Sukanta Majumder.
+    </span>
+
+    <a href="index.html#projects">
+        ← Back to Portfolio
+    </a>
+
+</div>
+
+
+</footer>
+
+<script src="main.js"></script>
+
+</body>
+
+</html>
